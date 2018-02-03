@@ -93,16 +93,16 @@ Method 2 : Using Inbuilt Functions { Works in both PDO and MYSQLI object }
    					
     > Delete : 
    	
-   			$this->database->where("condition")->delete('tablename');
-   	
-   	        [ Return type : true , false ]
+				$this->database->where("condition")->delete('tablename');
+
+				[ Return type : true , false ]
    	        
     > Number Of Rows :
    	
-   	          ● $this->database->num_rows('tablename');
-   	          ● $this->database->where('condition')->num_rows('tablename');
-   	          
-   	          [ Return Type : Integer value]
+				  ● $this->database->num_rows('tablename');
+				  ● $this->database->where('condition')->num_rows('tablename');
+
+				  [ Return Type : Integer value]
    	          
    	
     > Loading Error : 
