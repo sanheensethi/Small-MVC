@@ -91,13 +91,13 @@ Method 2 : Using Inbuilt Functions { Works in both PDO and MYSQLI object }
    							
    			[ Have Return type Array using { foreach loop } we display them ]
    					
-   	> Delete : 
+    > Delete : 
    	
    			$this->database->where("condition")->delete('tablename');
    	
    	        [ Return type : true , false ]
    	        
-   	> Number Of Rows :
+    > Number Of Rows :
    	
    	          ● $this->database->num_rows('tablename');
    	          ● $this->database->where('condition')->num_rows('tablename');
