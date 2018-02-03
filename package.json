@@ -1,0 +1,27 @@
+{
+  "name": "small-mvc",
+  "version": "1.0.0",
+  "description": "This is the Small MVC Framework for usage to make small websites.",
+  "main": "index.php",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sanheensethi/Small-MVC.git"
+  },
+  "keywords": [
+    "mvc",
+    "framework",
+    "mvcframework",
+    "php",
+    "phpadvance",
+    "phpoops"
+  ],
+  "author": "Sanheen Sethi",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/sanheensethi/Small-MVC/issues"
+  },
+  "homepage": "https://github.com/sanheensethi/Small-MVC#readme"
+}
