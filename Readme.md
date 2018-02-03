@@ -74,30 +74,30 @@ Method 2 : Using Inbuilt Functions { Works in both PDO and MYSQLI object }
    
    > Select : 
    		
-   		$this->database->select()
-   					   ->from('tablename')
-   					   ->where("condition")
-   					   ->orderby('colname',ASC|DSC)
-   					   ->srun();
-   			
-   			- srun = select run
-   			
-   			srun have default array type as ->srun('array');
-   			have also other selectable parameters like { array , assoc , object }
-   							
-   							● ->srun('array') <- default as ->srun()
-   							● ->srun('assoc')
-   							● ->srun('object')
-   							
-   			[ Have Return type Array using { foreach loop } we display them ]
+			$this->database->select()
+						   ->from('tablename')
+						   ->where("condition")
+						   ->orderby('colname',ASC|DSC)
+						   ->srun();
+
+				- srun = select run
+
+				srun have default array type as ->srun('array');
+				have also other selectable parameters like { array , assoc , object }
+
+								● ->srun('array') <- default as ->srun()
+								● ->srun('assoc')
+								● ->srun('object')
+
+				[ Have Return type Array using { foreach loop } we display them ]
    					
-    > Delete : 
+   > Delete : 
    	
 				$this->database->where("condition")->delete('tablename');
 
 				[ Return type : true , false ]
    	        
-    > Number Of Rows :
+   > Number Of Rows :
    	
 				  ● $this->database->num_rows('tablename');
 				  ● $this->database->where('condition')->num_rows('tablename');
@@ -105,7 +105,7 @@ Method 2 : Using Inbuilt Functions { Works in both PDO and MYSQLI object }
 				  [ Return Type : Integer value]
    	          
    	
-    > Loading Error : 
+   > Loading Error : 
 		
 		Error files will be placed in system/ERROR folder 
 		All the error files should be in .php extension
