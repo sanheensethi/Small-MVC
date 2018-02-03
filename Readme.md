@@ -104,13 +104,13 @@ Method 2 : Using Inbuilt Functions { Works in both PDO and MYSQLI object }
    	          
    	          [ Return Type : Integer value]
    	          
-   	
-Loading Error (With Data Passing): 
+   	
+    > Loading Error : 
 		
-Error files will be placed in system/ERROR folder 
-All the error files should be in .php extension
-error file have should this 
-                              {  <?= $error; ?>  } <- display error , variable name is same as you define on time of data passing
+		Error files will be placed in system/ERROR folder 
+		All the error files should be in .php extension
+		error file have should this 
+		 {  <?= $error; ?>  } <- display error , variable name is same as you define on time of data passing
 
 		creating and loading error : 
 		
@@ -137,23 +137,23 @@ error file have should this
 				
 View : 
 			
-view files are placed in app/view
+	view files are placed in app/view
 
-same thing as we did with error file 
-extension should be .php
+	same thing as we did with error file 
+	extension should be .php
 
-we pass data in views as -> $this->load->view('viewname',['data'=>$data]);
-or use compact function as explained in error loading
+	we pass data in views as -> $this->load->view('viewname',['data'=>$data]);
+	or use compact function as explained in error loading
 
 Controllers : 
 
-make it in app/controllers
+	make it in app/controllers
 
-name the file as you want
-type in url as { index.php?url=controllername/methodname/parameters }
+	name the file as you want
+	type in url as { index.php?url=controllername/methodname/parameters }
 
-controller extends with { EC_Controller }
-e.g. => 
+	controller extends with { EC_Controller }
+	e.g. => 
 
 	app/controller/user.php
 	
@@ -169,18 +169,18 @@ e.g. =>
 			
 Models : 
 
-These are in app/models
-name model file as "Yourfilename"model.php -> e.g => Loginmodel.php
+		These are in app/models
+		name model file as "Yourfilename"model.php -> e.g => Loginmodel.php
 
-in Loginmodel.php
+		in Loginmodel.php
 
-class Loginmodel extends EC_Model{
-	// do work 
-	// database is autoloaded $this->database // to use inbuilt funtions 
-							  $this->db // id you dont want to use inbuilt function use by own as explained above		
-	// use functionality here of databases
-}
+		class Loginmodel extends EC_Model{
+			// do work 
+			// database is autoloaded $this->database // to use inbuilt funtions 
+									  $this->db // id you dont want to use inbuilt function use by own as explained above		
+			// use functionality here of databases
+		}
 
-load model as in controllers as 
+		load model as in controllers as 
 
-$this->load->model('yourfilename'); -> e.g. => $this->load->model('login'); do not use "model" in writing name as time of loading that
+		$this->load->model('yourfilename'); -> e.g. => $this->load->model('login'); do not use "model" in writing name as time of loading that
