@@ -1,7 +1,37 @@
-Package : SmallMVC Framework
-Created By : Sanheen Sethi
-Date : 03/02/2018
-Time : 14:15
+ SmallMVC Framework
+
+ This content is released under the MIT License (MIT)
+
+ Copyright (c) 2018 , Sanheen Sethi
+
+ Permission is hereby granted, free of charge, to any person obtaining a copy
+ of this software and associated documentation files (the "Software"), to deal
+ in the Software without restriction, including without limitation the rights
+ to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+ copies of the Software, and to permit persons to whom the Software is
+ furnished to do so, subject to the following conditions:
+
+ The above copyright notice and this permission notice shall be included in
+ all copies or substantial portions of the Software.
+
+ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+ IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+ FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+ THE SOFTWARE.
+
+ * @package SmallMVC Framework
+ * @author	Sanheen Sethi
+ * @copyright	Copyright (c) 2018, Sanheen Sethi
+ * @license	http://opensource.org/licenses/MIT	MIT License
+ * @link	https://github.com/sanheensethi
+ * @since	version 1.0.0
+ * @version	version 1.0.1
+ * @filesource
+ * @Date : 03-02-2018
+ * @Time : 2:15 PM
 
 Description : 
 
@@ -74,43 +104,43 @@ Method 2 : Using Inbuilt Functions { Works in both PDO and MYSQLI object }
    
    > Select : 
    		
-   		$this->database->select()
-   					   ->from('tablename')
-   					   ->where("condition")
-   					   ->orderby('colname',ASC|DSC)
-   					   ->srun();
-   			
-   			- srun = select run
-   			
-   			srun have default array type as ->srun('array');
-   			have also other selectable parameters like { array , assoc , object }
-   							
-   							● ->srun('array') <- default as ->srun()
-   							● ->srun('assoc')
-   							● ->srun('object')
-   							
-   			[ Have Return type Array using { foreach loop } we display them ]
+			$this->database->select()
+						   ->from('tablename')
+						   ->where("condition")
+						   ->orderby('colname',ASC|DSC)
+						   ->srun();
+
+				- srun = select run
+
+				srun have default array type as ->srun('array');
+				have also other selectable parameters like { array , assoc , object }
+
+								● ->srun('array') <- default as ->srun()
+								● ->srun('assoc')
+								● ->srun('object')
+
+				[ Have Return type Array using { foreach loop } we display them ]
    					
-   	> Delete : 
+   > Delete : 
    	
-   			$this->database->where("condition")->delete('tablename');
-   	
-   	        [ Return type : true , false ]
+				$this->database->where("condition")->delete('tablename');
+
+				[ Return type : true , false ]
    	        
-   	> Number Of Rows :
+   > Number Of Rows :
    	
-   	          ● $this->database->num_rows('tablename');
-   	          ● $this->database->where('condition')->num_rows('tablename');
+				  ● $this->database->num_rows('tablename');
+				  ● $this->database->where('condition')->num_rows('tablename');
+
+				  [ Return Type : Integer value]
    	          
-   	          [ Return Type : Integer value]
-   	          
-   	
-Loading Error (With Data Passing): 
+   	
+   > Loading Error : 
 		
-Error files will be placed in system/ERROR folder 
-All the error files should be in .php extension
-error file have should this 
-                              {  <?= $error; ?>  } <- display error , variable name is same as you define on time of data passing
+		Error files will be placed in system/ERROR folder 
+		All the error files should be in .php extension
+		error file have should this 
+		 {  <?= $error; ?>  } <- display error , variable name is same as you define on time of data passing
 
 		creating and loading error : 
 		
@@ -137,23 +167,23 @@ error file have should this
 				
 View : 
 			
-view files are placed in app/view
+	view files are placed in app/view
 
-same thing as we did with error file 
-extension should be .php
+	same thing as we did with error file 
+	extension should be .php
 
-we pass data in views as -> $this->load->view('viewname',['data'=>$data]);
-or use compact function as explained in error loading
+	we pass data in views as -> $this->load->view('viewname',['data'=>$data]);
+	or use compact function as explained in error loading
 
 Controllers : 
 
-make it in app/controllers
+	make it in app/controllers
 
-name the file as you want
-type in url as { index.php?url=controllername/methodname/parameters }
+	name the file as you want
+	type in url as { index.php?url=controllername/methodname/parameters }
 
-controller extends with { EC_Controller }
-e.g. => 
+	controller extends with { EC_Controller }
+	e.g. => 
 
 	app/controller/user.php
 	
@@ -169,20 +199,21 @@ e.g. =>
 			
 Models : 
 
-These are in app/models
-name model file as "Yourfilename"model.php -> e.g => Loginmodel.php
+		These are in app/models
+		name model file as "Yourfilename"model.php -> e.g => Loginmodel.php
 
-in Loginmodel.php
+		in Loginmodel.php
 
-class Loginmodel extends EC_Model{
-	// do work 
-	// database is autoloaded $this->database // to use inbuilt funtions 
-							  $this->db // id you dont want to use inbuilt function use by own as explained above		
-	// use functionality here of databases
-}
+		class Loginmodel extends EC_Model{
+			// do work 
+			// database is autoloaded $this->database // to use inbuilt funtions 
+									  $this->db // id you dont want to use inbuilt function use by own as explained above		
+			// use functionality here of databases
+		}
 
-load model as in controllers as 
+		load model as in controllers as 
 
+<<<<<<< HEAD
 $this->load->model('yourfilename'); -> e.g. => $this->load->model('login'); do not use "model" in writing name as time of loading that
 
 URL Helper : 
@@ -190,7 +221,7 @@ URL Helper :
 you can use url helper to use css, js , images or extra files in your "view" .. dont need to load , it autoloads in every view
 
 <?= uri(assests/css/bootstrap.min.css); ?> <- It will print the full path as https://hostname.whatever/assests/css/bootstrap.min.css where assests is the folder placed where index.php file is placed
-	>Used as : 
+	> Used as : 
 		
 		* <link rel="stylesheet" href="<?= uri('assests/css/boitstrap.min.css'); ?>">
 		
