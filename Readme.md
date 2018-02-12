@@ -212,15 +212,14 @@ Models :
 		}
 
 		load model as in controllers as 
-
-<<<<<<< HEAD
-$this->load->model('yourfilename'); -> e.g. => $this->load->model('login'); do not use "model" in writing name as time of loading that
+		
+		$this->load->model('yourfilename'); -> e.g. => $this->load->model('login'); do not use "model" in writing name as time of loading that
 
 URL Helper : 
 
-you can use url helper to use css, js , images or extra files in your "view" .. dont need to load , it autoloads in every view
+		you can use url helper to use css, js , images or extra files in your "view" .. dont need to load , it autoloads in every view
 
-<?= uri(assests/css/bootstrap.min.css); ?> <- It will print the full path as https://hostname.whatever/assests/css/bootstrap.min.css where assests is the folder placed where index.php file is placed
+		<?= uri(assests/css/bootstrap.min.css); ?> <- It will print the full path as https://hostname.whatever/assests/css/bootstrap.min.css where assests is the folder placed where index.php file is placed
 	> Used as : 
 		
 		* <link rel="stylesheet" href="<?= uri('assests/css/boitstrap.min.css'); ?>">
